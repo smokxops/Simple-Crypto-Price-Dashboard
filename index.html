@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>crypto</title>
+    <title>Crypto Price Fetching Dashboard</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
     <div class="container">
+
         <header class="controls">
             <h1>Crypto Price Dashboard</h1>
+
             <div class="controls-right">
                 <input id="search" placeholder="Search coin (e.g., bitcoin)" />
+                
                 <select id="sortBy" title="Sort by">
                     <option value="market_cap">Market Cap</option>
                     <option value="current_price">Price</option>
                     <option value="price_change_percentage_24h">24h %</option>
                 </select>
+
                 <button id="sortDir" title="Toggle sort direction">↑</button>
                 <button id="refresh">Refresh</button>
                 <button id="themeToggle" title="Toggle dark/light">Theme</button>
             </div>
         </header>
+
         <section class="main-section">
-            <div id="meta">Last update: <span id="lastUpdate">—</span></div>
+            <div id="meta">
+                Last update: <span id="lastUpdate">—</span>
+            </div>
+
             <div id="error"></div>
+
             <table id="coins" class="coins-table">
                 <thead>
                     <tr>
@@ -36,10 +46,17 @@
                         <th>Market Cap</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+
+                <tbody>
+                    <!-- Coin rows will be inserted by JavaScript -->
+                </tbody>
             </table>
         </section>
-    <footer>Powered by CoinGecko ·</footer>
+
+        <footer>
+            Powered by CoinGecko
+        </footer>
+
     </div>
 
     <script src="./script.js" defer></script>
