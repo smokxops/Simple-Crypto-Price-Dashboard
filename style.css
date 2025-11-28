@@ -1,0 +1,154 @@
+:root{
+	--bg:#0f1724;
+	--card:#0b1020;
+	--muted:#9aa4b2;
+	--accent:#4f46e5;
+	--success:#16a34a;
+	--danger:#ef4444;
+}
+
+html,body{
+    height:100%;
+    margin:0;font-family:Segoe UI,system-ui,Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#071127 0%, #081226 100%);color:#e6eef6;
+}
+
+.container{
+    max-width:980px;
+    margin:24px auto;
+    padding:0 16px
+}
+
+h1{
+    margin:0;
+    font-size:1.6rem
+}
+
+header.controls{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px
+}
+
+input#search{
+    padding:8px 10px;
+    border-radius:6px;
+    border:1px solid rgba(255,255,255,0.08);
+    background:transparent;color:inherit
+}
+
+button{
+    padding:8px 10px;
+    border-radius:6px;
+    border:none;background:var(--accent);
+    color:white;
+    cursor:pointer;
+}
+
+button:active{transform:translateY(1px)}
+
+.coins-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:8px;
+    background:rgba(255,255,255,0.02);
+    box-shadow:0 6px 18px rgba(2,6,23,0.6);
+    border-radius:8px;overflow:hidden;
+}
+
+.coins-table thead{
+    background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+    font-size:0.9rem;
+    color:var(--muted);
+}
+
+.coins-table th,.coins-table td{
+    padding:12px 14px;
+    text-align:left;
+    border-bottom:1px solid rgba(255,255,255,0.02);
+}
+
+.coin-row{background:linear-gradient(180deg,transparent,rgba(255,255,255,0.01));}
+
+.coin-name{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.coin-symbol{
+    opacity:0.75;
+    font-size:0.85rem;
+}
+
+.coin-img{
+    border-radius:50%
+}
+
+.price-up{color:var(--success)}
+.price-down{color:var(--danger)}
+
+#meta{
+    color:var(--muted);
+    font-size:0.95rem;
+    margin-bottom:8px;
+}
+
+#error{
+    color:var(--danger);
+    display:none;
+    margin-bottom:8px;
+}
+
+footer{
+    margin-top:18px;
+    color:var(--muted);
+    font-size:0.9rem;
+    text-align:center;
+}
+
+/* small responsive tweaks */
+@media (max-width:640px){
+    .coins-table th:nth-child(1),
+    .coins-table td:nth-child(1),
+    .coins-table th:nth-child(5),
+    .coins-table td:nth-child(5)
+    {display:none}}
+
+/* page-specific tweaks for crypto/index.html */
+.main-section{margin-top:12px}
+#meta{
+    color:var(--muted);
+    font-size:0.95rem;
+    margin-bottom:8px;
+}
+#error{
+    color:var(--danger);
+    display:none;
+    margin-bottom:8px;
+}
+.controls{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+}
+.controls-right{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+/* light theme overrides */
+:root.light-theme{
+	--bg: #f6f8fb;
+	--card: #ffffff;
+	--muted: #6b7280;
+	--accent: #2563eb;
+	--success: #16a34a;
+	--danger: #dc2626;
+	color-scheme: light;
+}
+html.light-theme, html.light-theme body{background:linear-gradient(180deg,#ffffff 0%, #f6f8fb 100%); color:#0b1220}
+
